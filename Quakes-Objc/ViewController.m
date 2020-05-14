@@ -29,6 +29,10 @@
     //bob.name = [NSMutableString stringWithFormat:@"Fritz"];
     
     //NSLog(@"%@",bob);
+    
+    NSMutableString *name = [NSMutableString stringWithFormat:@"Fritz"];
+    bob.name = name;
+    NSLog(@"%@", bob);
 
 }
 

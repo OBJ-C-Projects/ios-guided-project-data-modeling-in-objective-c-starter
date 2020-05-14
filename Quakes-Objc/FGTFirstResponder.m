@@ -23,6 +23,11 @@
     return self;
 }
 
+//Setter
+- (void)setName:(NSString *)name {
+    _name = [name copy];
+}
+
 //description = CustomStringConvertible in swift
 - (NSString *)description {
     return [NSString stringWithFormat:@"First responder: %@", self.name];
