@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041E7949246D393F00A49D32 /* FGTFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E7948246D393F00A49D32 /* FGTFirstResponder.m */; };
+		041E7950246D480D00A49D32 /* FGTQuake.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E794F246D480D00A49D32 /* FGTQuake.m */; };
+		041E7952246D4F5600A49D32 /* FGTQuakeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E7951246D4F5600A49D32 /* FGTQuakeTest.m */; };
 		BDFC8F8223FDA09F00A39B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */; };
 		BDFC8F8523FDA09F00A39B21 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8423FDA09F00A39B21 /* SceneDelegate.m */; };
 		BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8723FDA09F00A39B21 /* ViewController.m */; };
@@ -38,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041E7947246D393F00A49D32 /* FGTFirstResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTFirstResponder.h; sourceTree = "<group>"; };
+		041E7948246D393F00A49D32 /* FGTFirstResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTFirstResponder.m; sourceTree = "<group>"; };
+		041E794E246D480D00A49D32 /* FGTQuake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTQuake.h; sourceTree = "<group>"; };
+		041E794F246D480D00A49D32 /* FGTQuake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTQuake.m; sourceTree = "<group>"; };
+		041E7951246D4F5600A49D32 /* FGTQuakeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTQuakeTest.m; sourceTree = "<group>"; };
 		BDFC8F7D23FDA09F00A39B21 /* Quakes-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quakes-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFC8F8023FDA09F00A39B21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +89,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041E794A246D47B400A49D32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041E7948246D393F00A49D32 /* FGTFirstResponder.m */,
+				041E7947246D393F00A49D32 /* FGTFirstResponder.h */,
+				041E794E246D480D00A49D32 /* FGTQuake.h */,
+				041E794F246D480D00A49D32 /* FGTQuake.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		041E794B246D47D000A49D32 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC8F8923FDA09F00A39B21 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		041E794C246D47E000A49D32 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC8F8623FDA09F00A39B21 /* ViewController.h */,
+				BDFC8F8723FDA09F00A39B21 /* ViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		041E794D246D47F200A49D32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC8F8023FDA09F00A39B21 /* AppDelegate.h */,
+				BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */,
+				BDFC8F8323FDA09F00A39B21 /* SceneDelegate.h */,
+				BDFC8F8423FDA09F00A39B21 /* SceneDelegate.m */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		BDFC8F7423FDA09F00A39B21 = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +149,10 @@
 		BDFC8F7F23FDA09F00A39B21 /* Quakes-Objc */ = {
 			isa = PBXGroup;
 			children = (
-				BDFC8F8023FDA09F00A39B21 /* AppDelegate.h */,
-				BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */,
-				BDFC8F8323FDA09F00A39B21 /* SceneDelegate.h */,
-				BDFC8F8423FDA09F00A39B21 /* SceneDelegate.m */,
-				BDFC8F8623FDA09F00A39B21 /* ViewController.h */,
-				BDFC8F8723FDA09F00A39B21 /* ViewController.m */,
-				BDFC8F8923FDA09F00A39B21 /* Main.storyboard */,
+				041E794D246D47F200A49D32 /* Resources */,
+				041E794C246D47E000A49D32 /* View Controllers */,
+				041E794B246D47D000A49D32 /* Storyboard */,
+				041E794A246D47B400A49D32 /* Model */,
 				BDFC8F8C23FDA0A100A39B21 /* Assets.xcassets */,
 				BDFC8F8E23FDA0A100A39B21 /* LaunchScreen.storyboard */,
 				BDFC8F9123FDA0A100A39B21 /* Info.plist */,
@@ -124,6 +168,7 @@
 			children = (
 				BDFC8F9C23FDA0A100A39B21 /* Quakes_ObjcTests.m */,
 				BDFC8F9E23FDA0A100A39B21 /* Info.plist */,
+				041E7951246D4F5600A49D32 /* FGTQuakeTest.m */,
 			);
 			path = "Quakes-ObjcTests";
 			sourceTree = "<group>";
@@ -255,10 +300,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFC8FB323FDA12B00A39B21 /* LSIFileHelper.m in Sources */,
+				041E7949246D393F00A49D32 /* FGTFirstResponder.m in Sources */,
 				BDFC8FB523FDA12B00A39B21 /* LSILog.m in Sources */,
 				BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */,
 				BDFC8FB723FDA12B00A39B21 /* LSIErrors.m in Sources */,
 				BDFC8F8223FDA09F00A39B21 /* AppDelegate.m in Sources */,
+				041E7950246D480D00A49D32 /* FGTQuake.m in Sources */,
 				BDFC8F9323FDA0A100A39B21 /* main.m in Sources */,
 				BDFC8F8523FDA09F00A39B21 /* SceneDelegate.m in Sources */,
 			);
@@ -268,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041E7952246D4F5600A49D32 /* FGTQuakeTest.m in Sources */,
 				BDFC8FB423FDA12B00A39B21 /* LSIFileHelper.m in Sources */,
 				BDFC8FB623FDA12B00A39B21 /* LSILog.m in Sources */,
 				BDFC8F9D23FDA0A100A39B21 /* Quakes_ObjcTests.m in Sources */,
@@ -420,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = "Quakes-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = "Quakes-Objc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,7 +502,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = "Quakes-ObjcTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,7 +522,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = "Quakes-ObjcTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
