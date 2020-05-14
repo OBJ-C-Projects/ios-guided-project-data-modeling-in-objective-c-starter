@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "FGTFirstResponder.h"
 
 
 @interface ViewController ()
@@ -18,9 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    // Initialize object
+    FGTFirstResponder *bob = [[FGTFirstResponder alloc] init];
     
+    bob.name = @"Bob";
+    
+    NSLog(@"%@",bob);
+    
+    //bob.name = [NSMutableString stringWithFormat:@"Fritz"];
+    
+    //NSLog(@"%@",bob);
+
 }
 
 

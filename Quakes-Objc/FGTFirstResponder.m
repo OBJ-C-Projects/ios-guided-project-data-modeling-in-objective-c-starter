@@ -10,4 +10,22 @@
 
 @implementation FGTFirstResponder
 
+- (instancetype)initWithName: (NSString *)name{
+    
+    //Call the NSObject initializer
+    self = [super init];
+    
+    
+    if(self){
+        _name = [name copy];
+    }
+    
+    return self;
+}
+
+//description = CustomStringConvertible in swift
+- (NSString *)description {
+    return [NSString stringWithFormat:@"First responder: %@", self.name];
+}
+
 @end

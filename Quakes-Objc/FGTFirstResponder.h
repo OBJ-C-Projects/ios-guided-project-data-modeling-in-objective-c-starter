@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FGTFirstResponder : NSObject
 
+//Create property
+@property (nonatomic, copy) NSString *name;
+
+
+- (instancetype)initWithName: (NSString *)name;
+
+
 
 
 
