@@ -12,7 +12,7 @@
 
 - (instancetype)initWithPlace:(NSString *)place
                          time:(NSDate *)time
-                    magnitude:(double)magnitude
+                    magnitude:(NSNumber *)magnitude
                      latitude:(double)latitude
                     longitude:(double)longitude{
     self = [super init];
@@ -47,6 +47,11 @@
          longitude = coordinates[0];
          latitude = coordinates[1];
      }
+    
+    //check if the mag is null as if is optional
+    if([magnitude isKindOfClass:[NSNull class]]){
+        magnitude = nil;
+    }
      
      // nil mag is valid, just N/A (magnitude is optional)
      if ([magnitude isKindOfClass:[NSNull class]]) { // is mag null?
@@ -63,7 +68,7 @@
      NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInMilliseconds / 1000.0];
      
     
-    return [self initWithPlace:place time:date magnitude:magnitude.doubleValue latitude:latitude.doubleValue longitude:longitude.doubleValue ];
+    return [self initWithPlace:place time:date magnitude:magnitude latitude:latitude.doubleValue longitude:longitude.doubleValue ];
 }
 
 

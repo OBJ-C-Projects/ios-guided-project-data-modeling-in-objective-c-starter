@@ -15,13 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 //Create readonly because we just need it to represent the JSON from API
 @property (nonatomic, readonly, copy) NSString *place;
 @property (nonatomic, readonly) NSDate *time;
-@property (nonatomic, readonly) double magnitude;
+@property (nonatomic, readonly, nullable) NSNumber *magnitude;
 @property (nonatomic, readonly) double latitude;
 @property (nonatomic, readonly) double longitude;
 
 - (instancetype)initWithPlace:(NSString *)place
                          time:(NSDate *)time
-                    magnitude:(double)magnitude
+                    magnitude:(NSNumber *)magnitude
                      latitude:(double)latitude
                     longitude:(double)longitude;
 
