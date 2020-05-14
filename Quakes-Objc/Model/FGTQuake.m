@@ -28,12 +28,42 @@
     return self;
 }
 
-- (instancetype)initWithDiccionary:(NSDictionary *)diccionary{
-//    self = [super init]
-//    if(self){
-//
-//    }
-    return nil;
+- (instancetype)initWithDiccionary:(NSDictionary *)dictionary{
+
+    //JSON levels/layers to get to wnated properties
+    NSDictionary *properties = dictionary[@"properties"];
+    NSDictionary *geometry = dictionary[@"geometry"];
+     NSArray *coordinates = geometry[@"coordinates"];
+     
+     NSNumber *magnitude = properties[@"mag"];
+     NSString *place = properties[@"place"];
+     NSNumber *timeNumber = properties[@"time"];
+     
+     // Longitude is first in array
+     NSNumber *longitude; // can crash if we access without checking size
+     NSNumber *latitude;
+
+     if (coordinates.count >= 2) {
+         longitude = coordinates[0];
+         latitude = coordinates[1];
+     }
+     
+     // nil mag is valid, just N/A (magnitude is optional)
+     if ([magnitude isKindOfClass:[NSNull class]]) { // is mag null?
+         magnitude = nil;
+     }
+     
+     // failable init (return nil -> failed to set it up)
+     if (!place || !timeNumber || !longitude || !latitude) {
+         return nil;
+     }
+     
+     // NSTimeInterval = time in seconds
+     double timeInMilliseconds = timeNumber.doubleValue;
+     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInMilliseconds / 1000.0];
+     
+    
+    return [self initWithPlace:place time:date magnitude:magnitude.doubleValue latitude:latitude.doubleValue longitude:longitude.doubleValue ];
 }
 
 
