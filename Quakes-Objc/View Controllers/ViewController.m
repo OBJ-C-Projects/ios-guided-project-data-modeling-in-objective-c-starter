@@ -10,6 +10,9 @@
 #import "FGTFirstResponder.h"
 #import "FGTQuakeFetcher.h"
 #import "FGTQuake.h"
+#import "NSDateInterval+FGTDateInterval.h"
+
+
 
 @interface ViewController ()
 
@@ -23,20 +26,41 @@
     [super viewDidLoad];
     
     // Initialize object
-    FGTFirstResponder *bob = [[FGTFirstResponder alloc] init];
-    
-    bob.name = @"Bob";
-    
-    NSLog(@"%@",bob);
+//    FGTFirstResponder *bob = [[FGTFirstResponder alloc] init];
+//    
+//    bob.name = @"Bob";
+//    
+//    NSLog(@"%@",bob);
     
     //bob.name = [NSMutableString stringWithFormat:@"Fritz"];
     
     //NSLog(@"%@",bob);
     
-    NSMutableString *name = [NSMutableString stringWithFormat:@"Fritz"];
-    bob.name = name;
-    NSLog(@"%@", bob);
+//    NSMutableString *name = [NSMutableString stringWithFormat:@"Fritz"];
+//    bob.name = name;
+//    NSLog(@"%@", bob);
+    
+    NSDateInterval *dateInterval = [NSDateInterval fgt_dateIntervalByAddingDays:-7];
+    [self.fetch fetchQuakesInTimeInterval:dateInterval completionBlock:^(NSArray<FGTQuake *> * _Nonnull quakes, NSError * _Nonnull error) {
+        if (error) {
+            NSLog(@"Quake fetching error: %@", error);
+            return;
+        }
+        //Todo: print quakes
+        
+        NSLog(@"Succesfully fetch quakes: %luli", (unsigned long)quakes.count);
+    }];
 
+}
+
+//Properties'[p[
+
+//Lazy property to init
+- (FGTQuakeFetcher *)fetcher {
+    if(!_fetch) {
+        _fetch = [[FGTQuakeFetcher alloc] init];
+    };
+    return _fetch;
 }
 
 
