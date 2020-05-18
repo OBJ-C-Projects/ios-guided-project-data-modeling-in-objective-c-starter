@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
                      latitude:(double)latitude
                     longitude:(double)longitude;
 
-- (instancetype)initWithDiccionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end
 

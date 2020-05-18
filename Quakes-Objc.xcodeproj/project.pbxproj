@@ -12,6 +12,7 @@
 		041E7952246D4F5600A49D32 /* FGTQuakeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E7951246D4F5600A49D32 /* FGTQuakeTest.m */; };
 		044FAEA124725AF100DDDA43 /* NSDateInterval+FGTDateInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 044FAEA024725AF100DDDA43 /* NSDateInterval+FGTDateInterval.m */; };
 		044FAEA424726E9400DDDA43 /* FGTQuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 044FAEA324726E9400DDDA43 /* FGTQuakeFetcher.m */; };
+		044FAEA72472860C00DDDA43 /* FGTQuakeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 044FAEA62472860C00DDDA43 /* FGTQuakeResults.m */; };
 		BDFC8F8223FDA09F00A39B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */; };
 		BDFC8F8523FDA09F00A39B21 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8423FDA09F00A39B21 /* SceneDelegate.m */; };
 		BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8723FDA09F00A39B21 /* ViewController.m */; };
@@ -52,6 +53,8 @@
 		044FAEA024725AF100DDDA43 /* NSDateInterval+FGTDateInterval.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateInterval+FGTDateInterval.m"; sourceTree = "<group>"; };
 		044FAEA224726E9400DDDA43 /* FGTQuakeFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTQuakeFetcher.h; sourceTree = "<group>"; };
 		044FAEA324726E9400DDDA43 /* FGTQuakeFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTQuakeFetcher.m; sourceTree = "<group>"; };
+		044FAEA52472860C00DDDA43 /* FGTQuakeResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FGTQuakeResults.h; sourceTree = "<group>"; };
+		044FAEA62472860C00DDDA43 /* FGTQuakeResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FGTQuakeResults.m; sourceTree = "<group>"; };
 		BDFC8F7D23FDA09F00A39B21 /* Quakes-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quakes-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFC8F8023FDA09F00A39B21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				041E7947246D393F00A49D32 /* FGTFirstResponder.h */,
 				041E794E246D480D00A49D32 /* FGTQuake.h */,
 				041E794F246D480D00A49D32 /* FGTQuake.m */,
+				044FAEA52472860C00DDDA43 /* FGTQuakeResults.h */,
+				044FAEA62472860C00DDDA43 /* FGTQuakeResults.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			files = (
 				044FAEA424726E9400DDDA43 /* FGTQuakeFetcher.m in Sources */,
 				BDFC8FB323FDA12B00A39B21 /* LSIFileHelper.m in Sources */,
+				044FAEA72472860C00DDDA43 /* FGTQuakeResults.m in Sources */,
 				041E7949246D393F00A49D32 /* FGTFirstResponder.m in Sources */,
 				BDFC8FB523FDA12B00A39B21 /* LSILog.m in Sources */,
 				BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */,

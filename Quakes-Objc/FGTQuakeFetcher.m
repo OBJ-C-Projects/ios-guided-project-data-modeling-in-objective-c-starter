@@ -9,7 +9,7 @@
 #import "FGTQuakeFetcher.h"
 #import "LSIErrors.h"
 #import "FGTQuake.h"
-//#import "FGTQuakeResults.h"
+#import "FGTQuakeResults.h"
 
 static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/query";
 
@@ -60,6 +60,8 @@ static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/qu
             return;
         }
         
+        FGTQuakeResults * quakeResults = [[FGTQuakeResults alloc] initWithDictionary: dictionary];
+        completionBlock(quakeResults.quakes, nil);
     }];
     
     [task resume];

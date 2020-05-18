@@ -35,7 +35,7 @@
     NSLog(@"JSON: %@", quakeDictionary);
     
     NSDate *time = [NSDate dateWithTimeIntervalSince1970:1388620296020 / 1000.0];
-    FGTQuake *quake = [[FGTQuake alloc] initWithDiccionary:quakeDictionary];
+    FGTQuake *quake = [[FGTQuake alloc] initWithDictionary:quakeDictionary];
     
     NSLog(@"quake: %@", quake);
     

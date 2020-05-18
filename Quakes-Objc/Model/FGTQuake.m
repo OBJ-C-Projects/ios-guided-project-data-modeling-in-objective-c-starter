@@ -28,7 +28,7 @@
     return self;
 }
 
-- (instancetype)initWithDiccionary:(NSDictionary *)dictionary{
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary{
 
     //JSON levels/layers to get to wnated properties
     NSDictionary *properties = dictionary[@"properties"];
