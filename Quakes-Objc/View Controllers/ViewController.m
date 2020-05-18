@@ -8,9 +8,12 @@
 
 #import "ViewController.h"
 #import "FGTFirstResponder.h"
-
+#import "FGTQuakeFetcher.h"
+#import "FGTQuake.h"
 
 @interface ViewController ()
+
+@property (nonatomic) FGTQuakeFetcher *fetch;
 
 @end
 
