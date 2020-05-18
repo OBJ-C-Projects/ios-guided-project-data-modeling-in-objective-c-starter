@@ -35,11 +35,11 @@
     NSLog(@"JSON: %@", quakeDictionary);
     
     NSDate *time = [NSDate dateWithTimeIntervalSince1970:1388620296020 / 1000.0];
-    FGTQuake *quake = [[FGTQuake alloc] initWithDiccionary:quakeDictionary];
+    FGTQuake *quake = [[FGTQuake alloc] initWithDictionary:quakeDictionary];
     
     NSLog(@"quake: %@", quake);
     
-    XCTAssertNil(quake.magnitude);
+    //XCTAssertNil(quake.magnitude);
 //    XCTAssertEqualWithAccuracy(1.29, quake.magnitude, 0.0001);
     
     XCTAssertEqualObjects(@"10km SSW of Idyllwild, CA", quake.place);
