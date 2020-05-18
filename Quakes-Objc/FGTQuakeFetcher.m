@@ -7,6 +7,9 @@
 //
 
 #import "FGTQuakeFetcher.h"
+#import "LSIErrors.h"
+#import "FGTQuake.h"
+//#import "FGTQuakeResults.h"
 
 static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/query";
 
@@ -38,6 +41,25 @@ static NSString *baseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/qu
     //Create data task
     NSURLSessionDataTask *task = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSLog(@"%@", url);
+        if(error){
+            completionBlock(nil, error);
+            return;
+        }
+        
+        if(!data){
+            //Using the LSIDataNilError helper inside lambdaSDK
+            NSError *dataError = errorWithMessage(@"No quake data returned%@", LSIDataNilError);
+            completionBlock(nil, dataError);
+            return;
+        }
+        NSError *jsonError = nil;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        
+        if(jsonError){
+            completionBlock(nil, jsonError);
+            return;
+        }
+        
     }];
     
     [task resume];
